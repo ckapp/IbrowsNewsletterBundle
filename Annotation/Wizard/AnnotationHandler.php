@@ -3,7 +3,7 @@
 namespace Ibrows\Bundle\NewsletterBundle\Annotation\Wizard;
 
 use Symfony\Component\HttpKernel\Event\FilterControllerEvent;
-use Symfony\Bundle\FrameworkBundle\Routing\Router;
+use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -16,7 +16,7 @@ class AnnotationHandler
     protected $currentAnnotation;
     protected $currentAnnotationKey;
     
-    public function __construct(Router $router)
+    public function __construct(RouterInterface $router)
     {
         $this->router = $router;
     }
